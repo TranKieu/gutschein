@@ -50,6 +50,10 @@
       "linter": "eslint",
       "style": "scss",
       "unitTestRunner": "jest"
+    },
+    "@schematics/angular:component": {
+      "skipTests": true,
+      "inlineStyle": true
     }
   }
 }
