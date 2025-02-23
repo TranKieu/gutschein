@@ -54,6 +54,15 @@
     "@schematics/angular:component": {
       "skipTests": true,
       "inlineStyle": true
+    },
+    "@schematics/angular:service": {
+      "skipTests": true
+    },
+    "@schematics/angular:guard": {
+      "skipTests": true
+    },
+    "@schematics/angular:interceptor": {
+      "skipTests": true
     }
   }
 }

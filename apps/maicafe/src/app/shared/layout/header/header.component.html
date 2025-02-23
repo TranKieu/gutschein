@@ -1,0 +1,87 @@
+<nav class="bg-maicafe shadow">
+  <div class="max-w-nav mx-auto flex items-center justify-between">
+    <div class="flex items-center mx-4">
+      <!-- logo -->
+      <img
+        src="/images/maicafe.png"
+        alt=""
+        class="h-16 w16 object-scale-down"
+      />
+      <span class="relative top-6 text-sm hidden love:flex"
+        >From Plau with love</span
+      >
+    </div>
+    <!-- End logo -->
+
+    <!-- nav-screen -->
+    <!-- Làm thêm hiệu ứng gặch đít cho chữ -->
+    <div class="items-center justify-between mx-auto md:flex tracking-wider">
+      <a href="#" class="py-5 px-3"> Home </a>
+      <a href="" class="py-5 px-3"> Menu </a>
+    </div>
+    <!-- End nav-screen -->
+    <!--  Khi màn hình nhỏ
+        Ẩn: opacity-0 = giữ vị trí đó
+        Hiện: bỏ opacity-0 đi
+    -->
+    @if(true){
+    <!--   @if(('user')===null) { -->
+    <button
+      class="ml-auto mr-6 p-4 md:hidden focus:outline-none"
+      [ngClass]="{ 'opacity-0': isOpen(), 'pointer-events-none': isOpen() }"
+      aria-label="open sidebar"
+      aria-expanded="false"
+      aria-controls="sidebar"
+      (click)="toggleSidebar()"
+    >
+      <!-- Hambeger button -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+        />
+      </svg>
+    </button>
+    <!-- login Form -->
+    <div
+      id="sidebar"
+      class="fixed z-10 top-16 -right-full transition-[right] duration-300 ease-in-out bg-maicafe h-screen md:h-auto md:static p-4 tracking-wider"
+      [ngClass]="{ 'right-0': isOpen(), '-right-full': !isOpen() }"
+    >
+      <button
+        (click)="toggleSidebar()"
+        class="ml-2 md:hidden focus:outline-none"
+        aria-label="close sidebar"
+      >
+        <!-- close button -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18 18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <!-- End-Close button -->
+      <maicf-login-form (login)="login($event)"></maicf-login-form>
+    </div>
+    }
+
+    <!-- END-mobile-menu -->
+  </div>
+</nav>

@@ -1,0 +1,27 @@
+<form
+  [formGroup]="formMaicafe"
+  (ngSubmit)="onSubmit()"
+  class="md:flex items-center"
+>
+  <input
+    id="email"
+    type="email"
+    placeholder="email"
+    class="block w-full p-2 mt-1 ml-2 text-sm text-gray-900 border-2 border-gray-300 rounded-lg bg-gray-50 outline-none focus:ring-cafe focus:border-cafe"
+    formControlName="email"
+    autocomplete="on"
+  />
+  <input
+    id="kennwort"
+    type="password"
+    class="block w-full p-2 mt-1 ml-2 text-sm text-gray-900 border-2 border-gray-300 rounded-lg bg-gray-50 outline-none focus:ring-cafe focus:border-cafe"
+    placeholder="password"
+    formControlName="password"
+  />
+  <button
+    type="submit"
+    class="w-full md:w-auto mt-1 ml-2 py-2 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-maicafe focus:z-10 focus:ring-4 focus:ring-gray-100"
+  >
+    Login
+  </button>
+</form>

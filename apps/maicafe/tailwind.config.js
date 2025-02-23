@@ -8,7 +8,18 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        maicafe: '#e1d3b0',
+        cafe: '#6b5651',
+      },
+      maxWidth: {
+        nav: '1280px',
+      },
+      screens: {
+        love: '975px',
+      },
+    },
   },
   plugins: [],
 };
