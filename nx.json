@@ -53,7 +53,8 @@
     },
     "@schematics/angular:component": {
       "skipTests": true,
-      "inlineStyle": true
+      "inlineStyle": true,
+      "changeDetection": "OnPush"
     },
     "@schematics/angular:service": {
       "skipTests": true
